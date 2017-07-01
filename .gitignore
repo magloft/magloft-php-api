@@ -1,0 +1,5 @@
+.DS_Store
+/psysh
+/test.php
+/vendor/*
+/composer.lock
