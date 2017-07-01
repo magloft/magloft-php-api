@@ -1,0 +1,15 @@
+{
+  "name": "magloft/api",
+  "autoload": {
+    "psr-4" : {
+      "MagLoft\\" : "src"
+    }
+  },
+  "require": {
+    "php": "^5.3.3 || ^7.0",
+    "rmccue/requests": "^1.7"
+  },
+  "scripts": {
+    "lint": "phpcbf --standard='ruleset.xml' --warning-severity=0 src/"
+  }
+}
