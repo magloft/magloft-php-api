@@ -40,7 +40,7 @@ namespace MagLoft\Api\Resources {
     public function changedAttributes() {
       $attributes = array();
       foreach (static::$attrWriter as $key) {
-        if (isset($this->data[$key]) && ($this->id === null || $this->$key !== $this->data[$key])) {
+        if ($this->id === null || (isset($this->data[$key]) && $this->$key !== $this->data[$key])) {
           $attributes[$key] = $this->$key;
         }
       }
