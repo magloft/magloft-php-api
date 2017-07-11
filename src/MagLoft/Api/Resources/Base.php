@@ -81,7 +81,7 @@ namespace MagLoft\Api\Resources {
 
     }
 
-    private function client() {
+    protected function client() {
       return Client::instance();
     }
 
