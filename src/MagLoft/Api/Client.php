@@ -3,6 +3,8 @@ namespace MagLoft\Api {
 
   use MagLoft\Api\Resources\Subscription;
   use MagLoft\Api\Resources\Reader;
+  use MagLoft\Api\Resources\Publication;
+  use MagLoft\Api\Resources\User;
   use MagLoft\Api\Http\JsonRequest;
 
   class Client {
@@ -39,6 +41,22 @@ namespace MagLoft\Api {
 
     public function reader($id) {
       return Reader::find($id);
+    }
+
+    public function users() {
+      return User::all();
+    }
+
+    public function user($id) {
+      return User::find($id);
+    }
+
+    public function publications() {
+      return Publication::all();
+    }
+
+    public function publication($id) {
+      return Publication::find($id);
     }
 
     public function get($api, $resource, $path, $params=array(), $headers=array()) {
