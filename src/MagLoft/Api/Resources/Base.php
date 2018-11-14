@@ -11,7 +11,9 @@ namespace MagLoft\Api\Resources {
 
     public static function all() {
       $response = Client::instance()->get(static::$api, static::$resource, static::$collectionPath);
-      $records = array();
+      if (!$response->success) {
+        throw new ApiException($response);
+      }
       foreach ($response->json as $item) {
         $records[] = new static($item);
       }

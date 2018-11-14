@@ -11,6 +11,6 @@
   "scripts": {
     "lint": "phpcs --standard='ruleset.xml' --warning-severity=0 src/",
     "fix": "phpcbf --standard='ruleset.xml' --warning-severity=0 src/",
-    "deploy": "php bin/compile.php ../magloft-wordpress/src/lib/magloft-api.php"
+    "deploy": "php bin/compile.php ../magloft-wordpress-plugin/src/lib/magloft-api.php"
   }
 }
